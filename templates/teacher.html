@@ -3,4 +3,11 @@
 
 {% block content %}
     <h1>this is a teacher page</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Teacher Name</label>
+        <input type="text" name="teacher_name">
+        <button type="submit">Submit</button>
+    </form>
 {% endblock %}
