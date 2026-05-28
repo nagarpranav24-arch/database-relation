@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
 
+{% block  title %}
+    Adriana
+{% endblock %}
+
 {% block content %}
     <h1>this is a homepage</h1>
+    {% for course in courses %} <!-- this is a loop taking all the objects from view  of base-->
+      <h1>{{course.id}} </h1><h3> {{course.name}}</h3> <!-- name is taken from models of courses because name =   -->
+        <a href="{% url 'details' course.id %} ">Details</a>
+        <a href="{% url 'data' course.name  %}">Data</a>
+    
+    {% endfor %}
 {% endblock %}

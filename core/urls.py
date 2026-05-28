@@ -12,4 +12,6 @@ urlpatterns = [
     path('teacher/', teacher, name="teacher"),
     path('student/', student, name="student"),
     path('course/', course, name="course"),
+    path('details/<int:course_id>/', course_student, name="details"),
+    path('data/<str:data>/', pass_data, name="data"),
 ]
